@@ -38,11 +38,11 @@ public class CardTrick {
         Scanner scanner = new Scanner(System.in);
  
         try {
-            System.out.print("Enter card number (1-13): ");
-            int input = Integer.parseInt(scanner.nextLine());
+            //System.out.print("Enter card number (1-13): ");
+            int input = 5; //luckyCard
             
-            System.out.print("Enter card Suit  (1: Hearts,  2: Diamonds,  3: Spades,  4: Clubs): "); 
-            int inputSuit = Integer.parseInt(scanner.nextLine());
+            //System.out.print("Enter card Suit  (1: Hearts,  2: Diamonds,  3: Spades,  4: Clubs): "); 
+            int inputSuit = 1; //luckyCard
             
             if((inputSuit > 0) && (inputSuit < 5)){
                 String SuitName = Card.SUITS[(inputSuit-1)];
@@ -67,7 +67,12 @@ public class CardTrick {
                     System.out.println("You Entered Card Number: " + input + " Suit of " + SuitName);
                 }
                 
-                
+                System.out.println();
+                System.out.println("Selected Game Cards: ");
+                for (int i=0; i<magicHand.length; i++)
+                {
+                    System.out.println("Card "+magicHand[i].getValue()+" of " + magicHand[i].getSuit()); 
+                }
                 
             }
             else
