@@ -57,6 +57,16 @@ public class CardTrick {
                 }
  
                 System.out.println();
+                if (cardFound)
+                {
+                    System.out.println("You Won, You have entered the right Number!");
+                }
+                else
+                {
+                    System.out.println("Sorry, You Lost. You have entered a card that was not picked by the game.");
+                    System.out.println("You Entered Card Number: " + input + " Suit of " + SuitName);
+                }
+                
                 
                 
             }
